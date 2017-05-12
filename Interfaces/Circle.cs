@@ -14,23 +14,31 @@ namespace Interfaces
     {
         private Ellipse ellipse;
         private Brush clr1;
-        public Circle(int initx, int inity)
+        public Circle(int initx, int inity, bool leftclck)
         {
-            
             x = initx;
             y = inity;
-           
-            CreateEllipse();
+            bool leftclick = leftclck;
+            if (leftclick)
+            {
+                CreateEllipse();
+            }
+            else
+            {
+                RndColor();   
+            }
         }
 
-        private Brush PickRandomBrush(Random rnd)
+        private void RndColor()
         {
-            Brush result = Brushes.Transparent;
-            Type brushesType = typeof(Brushes);
-            PropertyInfo[] properties = brushesType.GetProperties();
-            int random = rnd.Next(properties.Length);
-            result = (Brush)properties[random].GetValue(null, null);
-            return result;
+            Random rnd = new Random();
+            Color clr = Color.FromArgb(255, Convert.ToByte(rnd.Next(256)), Convert.ToByte(rnd.Next(256)), Convert.ToByte(rnd.Next(256)));
+            SolidColorBrush brsh = new SolidColorBrush(clr);
+            this.ellipse = new Ellipse();
+            ellipse.Fill = brsh;
+            ellipse.Height = this.size;
+            ellipse.Width = this.size;
+            ellipse.Margin = new Thickness(x, y, 0, 0);
         }
 
         private void CreateEllipse()

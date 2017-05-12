@@ -54,19 +54,19 @@ namespace Interfaces
         {
 
             Point p = Mouse.GetPosition(drawCanvas);
-            Square square1 = new Square(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            Circle circle1 = new Circle(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            Line line1 = new Line(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
             if (comboBox.SelectedValue == "Circle")
             {
+                Circle circle1 = new Circle(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), true);
                 circle1.DisplayOn(drawCanvas);
             }
             else if (comboBox.SelectedValue == "Square")
             {
+                Square square1 = new Square(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), true);
                 square1.DisplayOn(drawCanvas);
             }
             else if (comboBox.SelectedValue == "Line")
             {
+                Line line1 = new Line(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), true);
                 line1.DisplayOn(drawCanvas);
             }
 
@@ -74,21 +74,22 @@ namespace Interfaces
 
         private void drawCanvas_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
-            Random rnd = new Random();
-           
-
-
-
             Point p = Mouse.GetPosition(drawCanvas);
-            Square square1 = new Square(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            Circle circle1 = new Circle(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            Line line1 = new Line(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            circle1.DisplayOn(drawCanvas);
-            
-
-            
-
+            if (comboBox.SelectedValue == "Circle")
+            {
+                Circle circle1 = new Circle(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), false);
+                circle1.DisplayOn(drawCanvas);
+            }
+            else if (comboBox.SelectedValue == "Square")
+            {
+                Square square1 = new Square(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), false);
+                square1.DisplayOn(drawCanvas);
+            }
+            else if (comboBox.SelectedValue == "Line")
+            {
+                Line line1 = new Line(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), false);
+                line1.DisplayOn(drawCanvas);
+            }
         }
-       
     }
 }
