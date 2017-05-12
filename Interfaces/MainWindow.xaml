@@ -9,6 +9,8 @@
     <Grid>
         <Canvas Name="drawCanvas"  Background="Aqua"  HorizontalAlignment="Left" Height="277" VerticalAlignment="Top" Width="517" MouseUp="drawCanvas_MouseUp" Margin="0,42,0,0" PreviewMouseLeftButtonUp="drawCanvas_PreviewMouseLeftButtonUp" PreviewMouseRightButtonUp="drawCanvas_PreviewMouseRightButtonUp"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="246,12,0,0" VerticalAlignment="Top" Width="120
+                " Click="btnSave_Click"/>
 
     </Grid>
 </Window>
