@@ -33,24 +33,7 @@ namespace Interfaces
             comboBox.Items.Add("Line");
             comboBox.SelectedValue = "Circle";
         }
-
-        private void drawCanvas_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            //Point p = Mouse.GetPosition(drawCanvas);
-            //Circle circle1 = new Circle(Convert.ToInt32(p.X), Convert.ToInt32(p.Y));
-            // Square square1 = new Square(180,180);
-            // Line  line1 = new Line(200,200);
-            //  List<Shape> group = new List<Shape>();
-
-            //   group.Add(circle1);
-            //  group.Add(square1);
-            //  group.Add(line1);
-            //   foreach (Shape shape in group)
-            //   {
-            //   circle1.DisplayOn(drawCanvas);
-            // }
-        }
-
+        
         private void drawCanvas_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
