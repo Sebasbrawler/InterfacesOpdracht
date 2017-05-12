@@ -91,6 +91,7 @@ namespace Interfaces
                 Line line1 = new Line(Convert.ToInt32(p.X), Convert.ToInt32(p.Y), false);
                 line1.DisplayOn(drawCanvas);
             }
+            }
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             string savedButton = XamlWriter.Save(drawCanvas.Children);
