@@ -39,6 +39,7 @@ namespace Interfaces
             line.X2 = x + 50;
             line.Y1 = y;
             line.Y2 = y + 50;
+            line.ToolTip = brsh.Color.ToString();
         }
 
         private void CreateLine()

@@ -38,6 +38,7 @@ namespace Interfaces
             rect.Height = this.size;
             rect.Width = this.size;
             rect.Margin = new Thickness(x, y, 0, 0);
+            rect.ToolTip = brsh.Color.ToString();
         }
 
         private void CreateRectangle()

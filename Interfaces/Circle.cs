@@ -39,6 +39,8 @@ namespace Interfaces
             ellipse.Height = this.size;
             ellipse.Width = this.size;
             ellipse.Margin = new Thickness(x, y, 0, 0);
+            ellipse.ToolTip = brsh.Color.ToString();
+
         }
 
         private void CreateEllipse()
@@ -48,7 +50,6 @@ namespace Interfaces
             ellipse.Height = size;
             ellipse.Width = this.size;
             ellipse.Margin = new Thickness(x, y ,0,0);
-            
         }
 
         public override void DisplayOn(Canvas drawArea)
